@@ -1,0 +1,13 @@
+{
+  "name": "shaneeza",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shaneeza Portfolio",
+  "homepage": "https://shaneezaali.com/",
+  "bugs": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shaneeza/portfolio.git"
+  },
+  "author": "Shaneeza Ali)"
+}
