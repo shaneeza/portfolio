@@ -10,7 +10,7 @@ body {
 }
 
 main {
-  padding: 0 40px;
+  padding: 0 40px 40px;
 }
 
 h1 {
@@ -325,4 +325,49 @@ a:focus {
     12% 7%,
     19% 2%
   );
+}
+
+.links {
+  font-size: 20px;
+}
+
+.shape {
+  position: absolute;
+  /* mix-blend-mode: color-burn; */
+  height: 90vh;
+  /* min-height: var(--height); */
+  width: 60vw;
+  clip-path: polygon(
+    95.32% 7.41%,
+    99.72% 15.83%,
+    93.79% 24.08%,
+    83.16% 33.69%,
+    78.54% 41.61%,
+    74.4% 49.26%,
+    70.84% 58.13%,
+    69.07% 65.42%,
+    68.78% 72.17%,
+    69.76% 78.97%,
+    72.36% 85.14%,
+    77.15% 91.55%,
+    83.82% 96.79%,
+    85.58% 101.66%,
+    88.36% 104.49%,
+    7px 98.41%,
+    2.41% 0.11%
+  );
+  /* background: antiquewhite; */
+  max-width: 800px;
+  z-index: -1;
+
+  /* mix-blend-mode: exclusion; */
+  background: #8e4b3247;
+  background: #8e4b3233;
+}
+
+.shape--2 {
+  right: 40px;
+  transform: scale(-1);
+  mix-blend-mode: soft-light;
+  background: #8e4b3247;
 }
