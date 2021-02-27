@@ -1,6 +1,6 @@
 :root {
-  --body-background: #b66b3e;
-  --body-color: #eeddcb;
+  --body-background: #e04a8466;
+  --body-color: #3f5788;
   --clip-path: polygon(
     27% 5%,
     32% 12%,
@@ -82,9 +82,42 @@ main {
   overflow-x: hidden;
 }
 
+main::before,
+main::after {
+  content: "";
+  background: var(--bc, hsl(173deg, 20%, 59%, 21%));
+  position: absolute;
+  height: 90vh;
+  width: 60vw;
+  clip-path: var(--shape-clip-path);
+  -webkit-clip-path: var(--shape-clip-path);
+  max-width: 800px;
+  z-index: -1;
+}
+
+main::before {
+  --bc: hsla(16, 48%, 38%, 28%);
+  right: var(--r, -10px);
+  transform: scale(-1);
+  mix-blend-mode: soft-light;
+}
+
+main::after {
+  top: 0;
+  left: var(--l, 0);
+}
+
 @media (min-width: 600px) {
   main {
     --p: 0 40px 50px;
+  }
+
+  main::after {
+    --l: 10px;
+  }
+
+  main::before {
+    --r: 20px;
   }
 }
 
@@ -95,6 +128,8 @@ a {
 
 a:hover {
   color: black;
+  text-shadow: 0px 0px 20px #61f93b;
+  text-decoration: none;
 }
 
 a:focus {
@@ -107,7 +142,7 @@ p {
   max-width: 1200px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   p {
     --fs: 39px;
     --w: 82%;
@@ -126,6 +161,8 @@ h1 {
   font-weight: 400;
   font-size: var(--fs, 50px);
   line-height: var(--lh, 1.1);
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 600px) {
@@ -157,14 +194,14 @@ h1 {
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #7d7d7d;
+  background-color: #a5a6e0;
   clip-path: var(--clip-path);
   -webkit-clip-path: var(--clip-path);
 }
 
 .block {
-  width: 200px;
-  height: 200px;
+  width: 500px;
+  height: 500px;
   position: absolute;
   filter: drop-shadow(-1px 6px 3px rgba(50, 0, 0, 0.16));
   left: 0;
@@ -178,13 +215,13 @@ h1 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #c37c4d;
+  background-color: darkorange;
   clip-path: var(--clip-path);
   -webkit-clip-path: var(--clip-path);
 }
 
 .links {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .links a {
